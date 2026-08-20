@@ -20,7 +20,7 @@ An AI-powered customer support chat app built with Next.js, MUI, and OpenAI (GPT
 
 - Next.js 14 (App Router) + MUI
 - NextAuth.js (Credentials provider, JWT sessions)
-- Prisma + SQLite for users, chats, and messages
+- Prisma + PostgreSQL for users, chats, and messages
 - OpenAI API (`gpt-4o-mini`, streaming)
 
 ## Getting started
@@ -31,7 +31,13 @@ An AI-powered customer support chat app built with Next.js, MUI, and OpenAI (GPT
    npm install
    ```
 
-2. Configure environment variables in `.env.local`:
+2. Configure environment variables in `.env`:
+
+   ```bash
+   DATABASE_URL=your-postgres-connection-string
+   ```
+
+   and in `.env.local`:
 
    ```bash
    OPENAI_API_KEY=your-openai-api-key
@@ -39,12 +45,12 @@ An AI-powered customer support chat app built with Next.js, MUI, and OpenAI (GPT
    NEXTAUTH_URL=http://localhost:3000
    ```
 
-   `DATABASE_URL` (SQLite) is already set in `.env`.
+   Neither file is committed — each is `.gitignore`d since both now hold real credentials.
 
-3. Create the database:
+3. Apply the database schema:
 
    ```bash
-   npx prisma migrate dev
+   npx prisma migrate deploy
    ```
 
 4. Run the dev server:
