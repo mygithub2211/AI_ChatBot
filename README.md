@@ -60,3 +60,5 @@ An AI-powered customer support chat app built with Next.js, MUI, and OpenAI (GPT
    ```
 
    Open [http://localhost:3000](http://localhost:3000), create an account, and start chatting.
+
+
