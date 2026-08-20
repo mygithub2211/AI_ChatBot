@@ -2,6 +2,8 @@
 
 @author Phat Tran
 
+Link: https://ai-chat-bot-nu-inky.vercel.app
+
 An AI-powered customer support chat app built with Next.js, MUI, and OpenAI (GPT-4o-mini), with secure accounts and private per-user chat history.
 
 ## Features
